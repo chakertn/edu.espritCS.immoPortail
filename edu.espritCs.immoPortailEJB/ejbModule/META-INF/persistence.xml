@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="edu.espritCs.immoPortailEJB">
+		<jta-data-source>java:/immoDS</jta-data-source>
+		<class>edu.espritCs.immoPortailEJB.entities.Gouvernorat</class>
+		<class>edu.espritCs.immoPortailEJB.entities.Delegation</class>
+		<class>edu.espritCs.immoPortailEJB.entities.TypeDuBien</class>
+		<class>edu.espritCs.immoPortailEJB.entities.User</class>
+		<class>edu.espritCs.immoPortailEJB.entities.Annonce</class>
+		<class>edu.espritCs.immoPortailEJB.entities.AdPicture</class>
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLInnoDBDialect" />
+			<property name="hibernate.hbm2ddl.auto" value="create" />
+		</properties>
+	</persistence-unit>
+</persistence>

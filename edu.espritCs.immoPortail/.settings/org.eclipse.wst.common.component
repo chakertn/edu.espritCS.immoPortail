@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="edu.espritCs.immoPortail">
+        <wb-resource deploy-path="/" source-path="/EarContent" tag="defaultRootSource"/>
+        <dependent-module archiveName="edu.espritCs.immoPortailEJB.jar" deploy-path="/" handle="module:/resource/edu.espritCs.immoPortailEJB/edu.espritCs.immoPortailEJB">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="edu.espritCs.immoPortailClient.jar" deploy-path="/" handle="module:/resource/edu.espritCs.immoPortailClient/edu.espritCs.immoPortailClient">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>
