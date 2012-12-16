@@ -9,6 +9,8 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
@@ -24,6 +26,7 @@ import javax.persistence.TemporalType;
 public class Annonce implements Serializable {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int numAnnonce;
 	private String titreAnnonce;
 	@ManyToOne
@@ -43,7 +46,7 @@ public class Annonce implements Serializable {
 	@Temporal(TemporalType.DATE)
 	private Date dateEcheance;
 	private static final long serialVersionUID = 1L;
-	private String typeOperation; // VENTE+ACHAT | LCATON
+	private String typeOperation; // VENTE+ACHAT | LOCATON
 	@Column(name="etat",nullable=false,columnDefinition = "integer DEFAULT 1")
 	private int etat; // 1:active 2:périmée
     @OneToMany(mappedBy="annonce",fetch=FetchType.LAZY,cascade={CascadeType.PERSIST,CascadeType.REMOVE})   
@@ -157,5 +160,14 @@ public class Annonce implements Serializable {
 	public void setDelegation(Delegation delegation) {
 		this.delegation = delegation;
 	}
+	@OneToMany(mappedBy = "annonce",fetch=FetchType.LAZY,cascade={CascadeType.PERSIST,CascadeType.REMOVE})
+	public List<AdPicture> getPictures() {
+		return pictures;
+	}
 
+	public void setPictures(List<AdPicture> pictures) {
+		this.pictures = pictures;
+	}
+
+	
 }

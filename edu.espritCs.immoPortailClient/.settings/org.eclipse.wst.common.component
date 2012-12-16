@@ -2,6 +2,7 @@
     <wb-module deploy-name="edu.espritCs.immoPortailClient">
         <wb-resource deploy-path="/" source-path="/appClientModule" tag="defaultRootSource"/>
         <wb-resource deploy-path="/" source-path="/conf"/>
+        <wb-resource deploy-path="/" source-path="/utils"/>
         <property name="java-output-path" value="/edu.espritCs.immoPortailClient/build/classes"/>
     </wb-module>
 </project-modules>

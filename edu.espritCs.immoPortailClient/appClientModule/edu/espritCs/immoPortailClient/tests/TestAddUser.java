@@ -28,6 +28,16 @@ public class TestAddUser {
 			user.setTelephone("99 999 999");
 			user.setDateAdhesion(new Date());
 			usersManagementServicesRemote.createUser(user);
+			
+			user.setFirstName("user");
+			user.setLastName("ben user");
+			user.setLogin("user");
+			user.setPassword("user");
+			user.setTypeUser(0); // 0:guest
+			user.setEmail("user.benuser@gmail.com");
+			user.setTelephone("77 777 777");
+			user.setDateAdhesion(new Date());
+			usersManagementServicesRemote.createUser(user);
 
 		} catch (NamingException e) {
 			e.printStackTrace();

@@ -16,7 +16,7 @@ public class AdPicture implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idPicture;
 	@Lob @Basic(fetch = FetchType.LAZY)
-	@Column(length=1)
+	@Column(columnDefinition="MEDIUMBLOB NOT NULL") //16Mo Max !!
 	private byte[] picture;
 	@ManyToOne
 	private Annonce annonce;   

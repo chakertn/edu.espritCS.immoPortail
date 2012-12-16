@@ -31,6 +31,35 @@ public class TestAddDelegation {
 			delegation.setNomDelegation("BARGOU");
 			managementServicesRemote.createDelegation(delegation);
 			
+			gouvernorat.setCodeGouvernorat("TNS");
+			gouvernorat.setNomGouvernorat("TUNIS");
+			
+			delegation.setCodeDelegation("CRT");
+			delegation.setNomDelegation("CARTHAGE");
+			managementServicesRemote.createDelegation(delegation);
+			
+			delegation.setCodeDelegation("ORD");
+			delegation.setNomDelegation("OUARDIA");
+			managementServicesRemote.createDelegation(delegation);
+			
+			delegation.setCodeDelegation("MRS");
+			delegation.setNomDelegation("LA MARSA");
+			managementServicesRemote.createDelegation(delegation);
+			
+			delegation.setCodeDelegation("GLT");
+			delegation.setNomDelegation("LA GOULETTE");
+			managementServicesRemote.createDelegation(delegation);
+			
+			gouvernorat.setCodeGouvernorat("MNB");
+			gouvernorat.setNomGouvernorat("MANOUBA");
+			
+			delegation.setCodeDelegation("MRG");
+			delegation.setNomDelegation("MORNAGUIA");
+			managementServicesRemote.createDelegation(delegation);
+			
+			delegation.setCodeDelegation("TBR");
+			delegation.setNomDelegation("TEBORBA");
+			managementServicesRemote.createDelegation(delegation);
 		} catch (NamingException e) {
 			e.printStackTrace();
 		}
